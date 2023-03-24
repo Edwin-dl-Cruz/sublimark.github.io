@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-nav{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.container-navR{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.container2 {
+  margin-top: 100px;
+}
+
+img {
+  width: 40%;
+  height: auto;
+  margin-right: 20px;
+}
+
+.texto {
+  width: 60%;
+}
+
+/* h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+} */
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+.container-search{
+    
+    width: 78%;
+    margin: 50px auto;
+}
+
+.form-registro{
+  width: 400px;
+  margin: 100px auto 100px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+input[type="submit"] {
+  background-color: #3c3c3c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #000000;
+}
+
+.p-h3{
+  text-align: center;
+  font-size: 600px;
+  margin: 0 0 40px;
+}
+
+.container-padre{
+    width: 80%;
+    height: fit-content;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card-ed{
+    height: auto;
+    width: 25%;
+    margin: 20px;
+    box-shadow: 7px 9px 17px 0px rgba(69, 74, 67, 0.75);
+}
+
+.img-sub{
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 10%;
+  }
+  
+  
+  footer h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  footer ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .social-icons {
+    display: inline-block;
+  }
+  
+  .social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .social-icons li a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  @media screen and (max-width: 800px){
+    .img-sub{
+      margin: 100px -10px 50px;
+  }
+    .card-ed{
+      width: 40%;
+    }
+  }
+
+  @media screen and (max-width: 600px){
+    .card-ed{
+      width: 70%;
+    }
+  }
+
