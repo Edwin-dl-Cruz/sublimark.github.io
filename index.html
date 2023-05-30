@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Sublimark</title>
 </head>
 
 <body>
-
     <!-- Nadvar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="fixed-top navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-nav">
             <div>
                 <a class="navbar-brand" href="#">Sublimark</a>
@@ -24,18 +24,18 @@
                 </button>
             </div>
             <div class="collapse navbar-collapse container-navR" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav nadvar-text">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="./index.html">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#">Ofertas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="">Mi Carrito</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                        <a class="nav-link disabled">Cuenta</a>
                     </li>
                 </ul>
             </div>
@@ -96,70 +96,77 @@
         <input type="password" id="contraseña" name="contraseña" required>
         <label for="confirmar-contraseña">Confirmar contraseña:</label>
         <input type="password" id="confirmar-contraseña" name="confirmar-contraseña" required>
-        <input type="submit" value="Registrarse">
-      </form>
-      
+        <input type="submit" value="Registrarse" onclick="registrarUsuario(event)">
+    </form>
+
     <!-- Parrafo separador de productos -->
-      <div class="p-h3">
+    <div class="p-h3">
         <h3 style="font-size: 40px;">Nuestros Productos:</h3>
-      </div>
+    </div>
 
     <!-- Tarjetas de Productos -->
     <section class="container-padre">
         <div class="card card-ed">
             <img src="./src/Harry1.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Producto 1</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                <a href="#" class="btn btn-dark">Go somewhere</a>
+                <button href="#" class="btn btn-dark agregar-carrito">Agregar al carrito</button>
             </div>
         </div>
         <div class="card card-ed">
             <img src="./src/Harry3.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Producto 2</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                <a href="#" class="btn btn-dark">Go somewhere</a>
+                <button href="#" class="btn btn-dark agregar-carrito">Agregar al carrito</button>
             </div>
         </div>
         <div class="card card-ed">
             <img src="./src/Harry2.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Producto 3</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                <a href="#" class="btn btn-dark">Go somewhere</a>
+                <button href="#" class="btn btn-dark agregar-carrito">Agregar al carrito</button>
             </div>
         </div>
         <div class="card card-ed">
             <img src="./src/YodaL.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Producto 4</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                <a href="#" class="btn btn-dark">Go somewhere</a>
+                <button href="#" class="btn btn-dark agregar-carrito">Agregar al carrito</button>
             </div>
         </div>
         <div class="card card-ed">
             <img src="./src/YodaC.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Producto 5</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                <a href="#" class="btn btn-dark">Go somewhere</a>
+                <button href="#" class="btn btn-dark agregar-carrito">Agregar al carrito</button>
             </div>
         </div>
         <div class="card card-ed">
             <img src="./src/YodaR.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Producto 6</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                <a href="#" class="btn btn-dark">Go somewhere</a>
+                <button href="#" class="btn btn-dark agregar-carrito">Agregar al carrito</button>
             </div>
         </div>
+    </section>
+    <!-- contador carrito -->
+    <section id="carrito">
+        <h2>Carrito de Compra</h2>
+        <ul id="lista-carrito"></ul>
+        <button id="vaciar-carrito" class="btn btn-dark">Vaciar Carrito</button>
+        <button id="comprar-carrito" class="btn btn-dark">Comprar Carrito</button>
     </section>
 
     <!-- Buscador -->
@@ -190,15 +197,17 @@
                 </div>
                 <div class="col-md-4">
                     <h4>Síguenos</h4>
-                    <ul class="social-icons">
-                        <li><a href="#"><i class="fa fa-facebook">Facebock</i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
+                    <ul class="social-icons social-container">
+                        <li><img src="./icons/facebook (2).svg"></img></li>
+                        <li><img src="./icons/twitter.svg"></img></li>
+                        <li><img src="./icons/instagram.svg"></img></li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="./script.js"></script>
+    <script src="./shopping_cart.js"></script>
 </body>
 
 </html>

@@ -15,6 +15,18 @@
     justify-content: flex-end;
 }
 
+.nadvar-text{
+  font-size: 1.2rem;
+}
+
+header {
+  margin-top: 50px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -22,6 +34,11 @@
 
 .container2 {
   margin-top: 100px;
+}
+
+.img-sub{
+  text-align: center;
+  margin-top: 40px;
 }
 
 img {
@@ -34,16 +51,37 @@ img {
   width: 60%;
 }
 
-/* h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-} */
-
 p {
   font-size: 16px;
   line-height: 1.5;
 }
 
+#carrito {
+  background-color: #f5f5f5;
+  width: 70%;
+  margin: 10px auto ;
+  text-align: center;
+}
+
+#lista-carrito {
+  list-style: none;
+  padding: 0;
+}
+
+.carrito-lista{
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+#vaciar-carrito {
+  padding: 10px 20px;
+}
+
+#comprar-carrito {
+  padding: 10px 20px;
+}
 
 .container-search{
     
@@ -89,6 +127,10 @@ input[type="submit"]:hover {
   margin: 0 0 40px;
 }
 
+.swal-button{
+  background-color: #3c3c3c;
+}
+
 .container-padre{
     width: 80%;
     height: fit-content;
@@ -103,11 +145,6 @@ input[type="submit"]:hover {
     width: 25%;
     margin: 20px;
     box-shadow: 7px 9px 17px 0px rgba(69, 74, 67, 0.75);
-}
-
-.img-sub{
-    text-align: center;
-    margin-top: 20px;
 }
 
 footer {
@@ -144,18 +181,8 @@ footer {
   }
   
   .social-icons {
-    display: inline-block;
-  }
-  
-  .social-icons li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  .social-icons li a {
-    color: #fff;
-    font-size: 20px;
-    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
   }
   
   @media screen and (max-width: 800px){
@@ -166,7 +193,9 @@ footer {
       width: 40%;
     }
   }
-
+  .social-icons {
+    justify-content:flex-start;
+  }
   @media screen and (max-width: 600px){
     .card-ed{
       width: 70%;
